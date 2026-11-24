@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Otic — Privacy Policy</title>
+<style>
+  :root { --ink:#231F1B; --muted:#6B6459; --accent:#4B4682; --bg:#FBF8F3; --hairline:#E4DED2; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0;
+    background: var(--bg); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 56px 24px 96px; }
+  h1 { font-size: 28px; margin-bottom: 4px; }
+  .updated { color: var(--muted); font-size: 14px; margin-bottom: 40px; }
+  h2 { font-size: 18px; margin-top: 40px; border-bottom: 1px solid var(--hairline); padding-bottom: 8px; }
+  p, li { color: var(--ink); font-size: 15px; }
+  ul { padding-left: 20px; }
+  .badge {
+    display: inline-block; background: var(--accent); color: white;
+    font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 999px;
+    margin-bottom: 16px;
+  }
+  a { color: var(--accent); }
+  footer { margin-top: 56px; color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="badge">OTIC</span>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: November 24, 2026</p>
+
+  <p>Otic ("the app") is an e-book reader and audiobook player that keeps your library on your
+  device. This page explains, in plain language, what happens to your data when you use it.</p>
+
+  <h2>The short version</h2>
+  <p><strong>Otic has no server of its own and collects nothing about you.</strong> By default,
+  everything Otic does happens on your phone or tablet. Otic only goes online when you use a
+  feature that needs it — syncing through your own Google Drive, searching for a book, browsing a
+  free catalog, connecting to a server <em>you</em> run, downloading a link you paste, or turning
+  an Audio Snip into text. Each one is described below. None of them sends anything to us.</p>
+
+  <h2>What Otic stores, and where</h2>
+  <p>When you import a book or audiobook, Otic reads the file(s) you pick using Android's
+  Storage Access Framework — the standard system file/folder picker. Otic:</p>
+  <ul>
+    <li>Never uploads your book or audio files anywhere. Files you import stay where you put them
+      (on your device, an SD card, or a location you've linked such as a cloud-storage app you
+      already have installed); books you download from a catalog or server are saved inside Otic's
+      private storage on your device.</li>
+    <li>Keeps a local, on-device database of your library: book titles, authors, cover
+      images, reading/listening progress, bookmarks, highlights, notes, and Audio Snips you create.</li>
+    <li>Does not require an Otic account, sign-in, or profile. If you choose to connect Otic to a
+      server of your own (see "Your own servers and links" below), the login you enter is stored
+      only on your device and is used only for that server.</li>
+  </ul>
+  <p>None of this is ever sent to Otic — there is no Otic server.</p>
+
+  <h2>Otic Sync (optional)</h2>
+  <p>Otic Sync is an optional Otic Plus feature. It is <strong>off by default</strong>; nothing
+  syncs unless you turn it on and sign in with your Google account. When you do:</p>
+  <ul>
+    <li>Otic requests a single, narrow Google permission — access to its own
+      <strong>app-data folder</strong> in <em>your</em> Google Drive (the <code>drive.appdata</code>
+      scope). This is a private folder that only Otic can read or write; Google's own Drive interface
+      doesn't even show it to you. Otic asks for no other Google data.</li>
+    <li>Otic writes one file there containing your library <em>metadata and progress</em> — book
+      titles/authors (not the book files themselves), reading and listening positions, shelves,
+      reading sessions, badges, and your highlights and notes — so your other devices can merge it in.</li>
+    <li>This data goes to <strong>your own Google Drive</strong>, under your Google account and
+      Google's <a href="https://policies.google.com/privacy">privacy policy</a>. It does
+      <strong>not</strong> go to Otic — there is no Otic server, and we never receive or see it.</li>
+    <li>For Otic Sync we store only the name of the Google account you chose (on your device, to
+      show you it's connected) — no Google password or token. You can disconnect at any time in
+      Settings → Otic Sync, which stops syncing.</li>
+  </ul>
+
+  <h2>Book search and free catalogs (optional)</h2>
+  <p>Otic sends a request over HTTPS to a public book service only when you actively use one of
+  these features — never in the background:</p>
+  <ul>
+    <li><strong>Adding a physical book:</strong> the title or author you type is sent to
+      <a href="https://openlibrary.org/">Open Library</a> and
+      <a href="https://books.google.com/">Google Books</a> to look up book details and covers.</li>
+    <li><strong>Browsing the Catalogs tab:</strong> your searches and the pages you open are sent to
+      <a href="https://gutendex.com/">Gutendex</a> / <a href="https://www.gutenberg.org/">Project
+      Gutenberg</a> (and its PGLAF mirrors), <a href="https://librivox.org/">LibriVox</a> /
+      <a href="https://archive.org/">Internet Archive</a>, or
+      <a href="https://standardebooks.org/">Standard Ebooks</a>, and the books or audiobooks you
+      choose are downloaded from them.</li>
+  </ul>
+  <p>These requests carry what you searched for or picked and a generic app identifier (for example
+  <code>Otic-Android</code>) — no account, device id, or other personal identifier. Those services
+  handle the request under their own privacy policies.</p>
+
+  <h2>Your own servers and links (optional)</h2>
+  <ul>
+    <li><strong>OPDS catalogs and Audiobookshelf:</strong> if you add a catalog address or connect an
+      Audiobookshelf server, Otic talks only to the address you entered. Any username, password, or
+      access token you provide is stored only on your device, is excluded from Android backups, and
+      is only ever sent to that server. Otic sends a password or token over plain
+      <code>http://</code> only to a server on your own network; anything on the internet needs
+      <code>https://</code>. For a linked Audiobookshelf book, Otic also sends your listening
+      position back to your server so the two stay in step.</li>
+    <li><strong>Import from a link:</strong> when you paste a web address, Otic downloads that page
+      or file (and, for an episode page, the audio file it points to).</li>
+    <li><strong>Wireless Drop:</strong> while the Wireless Drop screen is open, Otic runs a small
+      upload page on your Wi-Fi network so you can send books from a computer. It's reachable only on
+      your local network, only through the one-time address shown on screen, and it stops when you
+      leave that screen. Files you send go straight into your library on the device.</li>
+  </ul>
+
+  <h2>Audio Snips and transcription (optional)</h2>
+  <p>An Audio Snip saves a short clip of the audiobook you're listening to, and can turn its words
+  into text. The clip comes from the book's audio — <strong>Otic never records from your
+  microphone</strong>. Android's speech recognition service requires the microphone permission even
+  when it's given audio from a file, which is the only reason Otic asks for it.</p>
+  <p>Otic uses the on-device recognizer when your phone has one. If it doesn't, the clip is handed to
+  your phone's speech recognition service (usually Google's), which may send that short clip to its
+  servers to transcribe it, under that provider's own privacy policy. Otic itself never sends the
+  clip anywhere. Snips you save stay on your device.</p>
+
+  <h2>Third parties</h2>
+  <p>Otic does not include analytics, advertising, tracking, or crash-reporting SDKs of any
+  kind. We do not share or sell your data. The only outside services Otic contacts are the ones
+  described above, and only when you use the feature that needs them: Google Drive (Otic Sync),
+  Open Library and Google Books (book search), the free catalogs (Gutendex/Project Gutenberg,
+  LibriVox/Internet Archive, Standard Ebooks), servers and links you enter yourself, and your phone's
+  speech recognition service (Audio Snip transcription). Purchases of Otic Plus are handled by
+  Google Play.</p>
+
+  <h2>Permissions Otic requests, and why</h2>
+  <ul>
+    <li><strong>Notifications</strong> — to show the playback control notification while an
+      audiobook is playing, and progress for long tasks such as finding chapters.</li>
+    <li><strong>Media playback / wake lock / foreground service</strong> — to keep audio playing
+      reliably in the background and when your screen is off, and to let a long chapter scan finish.</li>
+    <li><strong>Boot-completed</strong> — used only to reschedule widget refreshes and watched-folder
+      checks; this does not involve the network.</li>
+    <li><strong>Internet</strong> — used only by the features described above (Otic Sync, book
+      search, catalogs, your own servers and links, and Wireless Drop on your local network).</li>
+    <li><strong>Microphone</strong> — required by Android's speech recognition service to transcribe
+      Audio Snips. Otic never records from the microphone. You can deny it; snips are still saved,
+      just without text.</li>
+    <li><strong>Vibration</strong> — for gentle haptic feedback, such as the sleep timer's
+      shake-to-reset.</li>
+  </ul>
+  <p>Otic does <strong>not</strong> request contacts, location, camera, or SMS access. (Capturing a
+  quote from a paper book uses the system camera or document scanner, which hands Otic only the
+  photo you take; the text is read on your device.)</p>
+
+  <h2>Your data, your control</h2>
+  <p>Deleting a book from within Otic removes it and its associated data from the app's
+  local database. Removing a saved catalog or Audiobookshelf server deletes its stored login.
+  Uninstalling Otic removes all app data from your device. If you used Otic Sync,
+  a copy of your sync file remains in your own Google Drive app-data folder — because it lives in
+  <em>your</em> Drive account, you control it directly and can remove it through Google (for example
+  by disconnecting the app from your Google account). Otic holds no copy to delete on its side.</p>
+
+  <h2>Children's privacy</h2>
+  <p>Otic does not knowingly collect any information from anyone, including children, because
+  it does not collect information at all.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy ever changes, the update will be posted on this page with a revised
+  "Last updated" date.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy or the app can be sent to
+    <a href="mailto:listenwithotic@gmail.com">listenwithotic@gmail.com</a>.</p>
+
+  <footer>Otic — a local-first e-book &amp; audiobook app.</footer>
+</div>
+</body>
+</html>
